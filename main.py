@@ -8,8 +8,8 @@ import httpx
 import database
 
 # ---- Config ----
-# Ollama runs locally, free, no API key needed
-OLLAMA_URL = "http://localhost:11434/api/chat"
+# Ollama runs locally, free, no API key needed. You can change the URL if you run Ollama on a different host or port."
+OLLAMA_URL ="https://appealing-glowworm-disarm.ngrok-free.dev/"
 OLLAMA_MODEL = "llama3.2:1b"  # change if you pulled a different model
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
