@@ -77,4 +77,10 @@ async def chat(req: ChatRequest):
 
 
 # Serve frontend static files (index.html, style.css, script.js)
-app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
+# app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
+
+if __name__ == "__main__":
+    import uvicorn
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=10000, reload=True)
